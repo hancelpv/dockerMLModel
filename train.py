@@ -8,14 +8,13 @@ import joblib
 
 
 def main():
-    logger.info("Test...")
+    logger.info("Inside main ...")
 
-    data = pd.read_csv("train.csv")
+    data = pd.read_csv("data/train.csv")
     data["Age"] = data["Age"].fillna(data["Age"].median())
-    logger.info(data.columns)
 
     x = data[["Age"]]
-    y = data[["Survived"]]
+    y = data["Survived"]
 
     model = LogisticRegression()
 

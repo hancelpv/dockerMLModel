@@ -8,9 +8,9 @@ import joblib
 
 
 def main():
-    logger.info("Test...")
+    logger.info("Inside predictions ...")
 
-    data = pd.read_csv("test.csv")
+    data = pd.read_csv("data/test.csv")
     data["Age"] = data["Age"].fillna(data["Age"].median())
 
     x = data[["Age"]]
@@ -22,7 +22,7 @@ def main():
     logger.info("Predictions : ")
     logger.info(pred)
 
-    logger.info("Run complete ...")
+    logger.info("Prediction complete ...")
 
     return
 
