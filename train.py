@@ -23,7 +23,7 @@ def main():
 
     joblib.dump(model, "model.pkl")
 
-    logger.info("Run complete ...")
+    logger.info("Training complete ...")
 
     return
 
